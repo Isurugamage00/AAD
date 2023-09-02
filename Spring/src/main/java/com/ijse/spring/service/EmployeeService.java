@@ -10,6 +10,6 @@ import com.ijse.spring.dto.EmployeeDTO;
 public interface EmployeeService {
     EmployeeDTO saveEmployee(EmployeeDTO employeeDTO);
     void deleteEmployee(String id);
-    EmployeeDTO updateEmployee(EmployeeDTO employeeDTO);
+    EmployeeDTO updateEmployee(String id,EmployeeDTO employeeDTO);
     EmployeeDTO getEmpId(String id);
 }

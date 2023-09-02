@@ -22,7 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public EmployeeDTO updateEmployee(EmployeeDTO employeeDTO) {
+    public EmployeeDTO updateEmployee(String id,EmployeeDTO employeeDTO) {
         return null;
     }
 

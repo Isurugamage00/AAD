@@ -34,6 +34,7 @@ public class Employee {
 
     @DeleteMapping("{id}")
     public void deleteEmployee(@PathVariable String id){
+        employeeService.deleteEmployee(id);
         System.out.println(id);
     }
 
@@ -41,10 +42,12 @@ public class Employee {
     public void updateEmployee(@PathVariable String id,@RequestBody EmployeeDTO employeeDTO){
         System.out.println(id);
         System.out.println(employeeDTO);
+        employeeService.updateEmployee(id,employeeDTO);
     }
 
     @GetMapping(value = "/{id}")
-    public List<EmployeeDTO> getEmployee(@PathVariable String id){
+    public EmployeeDTO getEmployee(@PathVariable String id){
 
+        return employeeService.getEmpId(id);
     }
 }
